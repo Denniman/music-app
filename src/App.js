@@ -1,9 +1,8 @@
-import './App.css';
 import {Header} from './components/Header/Header'
-import {Nav} from './components/Header/Nav'
 import {SearchBar} from './components/SearchBar/SearchBar'
 import {SideBar} from './components/SideBar'
 import {MusicBoard} from './components/MusicDetails/MusicBoard'
+import {TopSongs} from './components/TopSongs'
 import {Categories} from './components/Categories/Categories'
 import {Footer} from './components/Footer/Footer'
 import {
@@ -18,8 +17,10 @@ function App() {
       <Router>
         <main className="container">
         <SideBar />
-        <Nav />
-        <MusicBoard />
+        <Switch>
+          <Route path="/" component={MusicBoard} exact={true}/>
+          <Route path="/top-songs" component={TopSongs}/>
+        </Switch>
         </main>
       </Router>
   );

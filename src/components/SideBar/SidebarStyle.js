@@ -37,13 +37,15 @@ export const LinkContainer = styled.div`
     justify-content: space-evenly;
     align-items: flex-start;
 `
-export const LinksNav = styled.div`
-    padding: .7rem 2.4rem;
+export const LinksNavBtn = styled.button`
+    padding: 1rem 2.4rem;
     border-radius: .7rem;
     background-color: #f42538;
     font-size: 1.5rem;
     color: #fff;
     transition: all .3s;
+    border: none;
+    cursor: pointer;
 
     &:hover {
         background-color: #fb233b;

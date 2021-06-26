@@ -26,6 +26,15 @@ body {
   color: #252525;
 }
 
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
   .container {
    
     display: grid;
@@ -36,7 +45,7 @@ body {
     "sidebar nav  nav  nav"
     "sidebar main main main"
     "sidebar main main main"
-    "sidebar main main main";
+    "sidebar footer footer footer";
    
   }
 

@@ -1,12 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
 
 import {CategoriesNav,  Title,} from './NavStyle'
 
-export const Nav = () => {
+export const CategoryTitle = ({title}) => {
     return (
         <CategoriesNav>
-            <Title>Top Albums</Title>
+            <Title>{title}</Title>
         </CategoriesNav>
     )
 }

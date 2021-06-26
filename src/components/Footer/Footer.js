@@ -5,7 +5,7 @@ import {FooterContainer} from './FooterStyle'
 export const Footer = () => {
     return (
         <FooterContainer>
-            <h2>Footer</h2>
+            {/* <p>Made with &hearts; by <a href="https://github.com/dennimanhttps://github.com/denniman">Dennis Terna</a></p> */}
         </FooterContainer>
     )
 }

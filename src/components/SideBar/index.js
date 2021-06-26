@@ -1,11 +1,30 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {SearchInput} from '../SearchBar/SearchInput'
 import {SearchButton} from '../SearchBar/SearchButton'
+import { useDispatch, useSelector } from 'react-redux'
+// import {NavLink} from '../NavLinks'
+import {TopSongs} from '../TopSongs'
 
-import {SibeContainer, Title, LinkContainer, LinksNav, BrowseTitle} from './SidebarStyle'
+import {LinksBtn} from './LinksBtn'
+
+import {SibeContainer, Title, LinkContainer, BrowseTitle} from './SidebarStyle'
 
 export const SideBar = () => {
+
+    const {data:songs} = useSelector((state) => state.getSongsReducer)
+    const dispatch = useDispatch()
+
+    // useEffect(() => {
+    //     dispatch(TopSongs())
+    // }, [])
+
+
+    const handleChange = () => {
+        console.log('disppatched')
+        // dispatch(TopSongs())
+    }
+
     return(
         <SibeContainer>
         <Title>Stutern Music App</Title>
@@ -13,22 +32,22 @@ export const SideBar = () => {
         <SearchButton />
 
         <BrowseTitle>Browse Categories</BrowseTitle>
+        
+        <LinkContainer>
+        <Link to={'/'} style={{ textDecoration: 'none' }}>
+            <LinksBtn title='Top Albums' change={handleChange}/>
+        </Link>
+        </LinkContainer>
 
         <LinkContainer>
-        <Link to={''} style={{ textDecoration: 'none' }}>
-            <LinksNav>Top Albums</LinksNav>
+        <Link to={'top-songs'} style={{ textDecoration: 'none' }}>
+            <LinksBtn title='Top Songs'/>
         </Link>
         </LinkContainer>
 
         <LinkContainer>
         <Link to={''} style={{ textDecoration: 'none' }}>
-            <LinksNav>Top Songs</LinksNav>
-        </Link>
-        </LinkContainer>
-
-        <LinkContainer>
-        <Link to={''} style={{ textDecoration: 'none' }}>
-            <LinksNav>Playlist</LinksNav>
+            <LinksBtn title='Playlist'/>
         </Link>
         </LinkContainer>
             
