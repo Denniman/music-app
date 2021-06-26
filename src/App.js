@@ -1,9 +1,6 @@
-import {Header} from './components/Header/Header'
-import {SearchBar} from './components/SearchBar/SearchBar'
 import {SideBar} from './components/SideBar'
 import {MusicBoard} from './components/MusicDetails/MusicBoard'
 import {TopSongs} from './components/TopSongs'
-import {Categories} from './components/Categories/Categories'
 import {Footer} from './components/Footer/Footer'
 import {
   BrowserRouter as Router,
@@ -21,6 +18,7 @@ function App() {
           <Route path="/" component={MusicBoard} exact={true}/>
           <Route path="/top-songs" component={TopSongs}/>
         </Switch>
+        <Footer/>
         </main>
       </Router>
   );

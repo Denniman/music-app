@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 
 
-export const SibeContainer = styled.div`
+export const SideContainer = styled.div`
     height: 100%;
     width: 35rem;
     position: fixed;

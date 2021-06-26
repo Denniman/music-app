@@ -3,7 +3,6 @@ import {getAlbumsAsync} from '../../actions/getSongsAction'
 import { useDispatch, useSelector } from 'react-redux'
 import {Card} from '../Card'
 import {CategoryTitle} from '../Header/Nav'
-import {Footer} from '../Footer/Footer'
 import {Board} from './MusicBoardStyle'
 
 export const MusicBoard = () => {
@@ -30,7 +29,6 @@ export const MusicBoard = () => {
              return (<Card title={albumTitle} attribute={attribute} image={img} key={id}/>)
          })}
         </Board>
-         <Footer/>
         </>
     )
 }

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import {Card} from '../Card'
 import {CategoryTitle} from '../Header/Nav'
-import {Footer} from '../Footer/Footer'
+
 
 import {Board} from './style'
 
@@ -32,7 +32,7 @@ export const TopSongs = () => {
              return (<Card title={songTitle} attribute={attribute} image={img} key={id}/>)
          })}
         </Board>
-        <Footer/>
+        
         </>
     )
 }
