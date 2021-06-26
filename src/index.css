@@ -32,9 +32,12 @@ ul {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #252c23;
 }
 
+a:hover {
+  color:#f42538;
+}
   .container {
    
     display: grid;
