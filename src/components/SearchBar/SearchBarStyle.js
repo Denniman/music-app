@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Button} from 'antd';
 
 export const SearchBarContainer = styled.div`
     background-color: var(--theme-color);
@@ -23,5 +24,15 @@ export const Input = styled.input`
     &:focus {
         outline: 1px solid tomato;
     }
+`
+
+export const CustomButton = styled(Button)`
+    padding: .9rem 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    color: #fff;
+    background-color: #252525;
+    cursor: pointer;
 `
 

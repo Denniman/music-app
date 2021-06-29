@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CategoriesContainer = styled.h1`
-    grid-area: main;
+    grid-area: nav;
     background-color: #818181;
     padding: var(--padding);
 `

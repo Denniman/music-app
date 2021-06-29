@@ -7,17 +7,20 @@ export const SideContainer = styled.div`
     height: 100%;
     width: 35rem;
     position: fixed;
-    z-index: 1;
-    /* top: 0; */
-    /* overflow-x: hidden; */
     padding: var(--padding);
     background-color: #f9f9f9;
-    grid-area: sidebar;
+
+    @media only screen and (max-width: 1338px) {
+        width: 25rem;
+  }
 
     @media only screen and (max-width: 550px) {
-        display: none;
-        width: 0;
+        position: relative;
+        width: 100%;
+        height: 26vh;
+        grid-column: 1/-1;
     }
+
 
 `
 export const Title = styled.h1`
@@ -36,6 +39,11 @@ export const LinkContainer = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
+
+    @media only screen and (max-width: 550px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 `
 export const LinksNavBtn = styled.button`
     padding: 1rem 2.4rem;

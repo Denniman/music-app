@@ -3,7 +3,6 @@ import styled from 'styled-components'
 export const CardContainer = styled.div`
     background-color: #f9f9f9;
     border-radius: .7rem;
-    /* color: #252525; */
     text-align: center;
 `
 export const Title = styled.h3`

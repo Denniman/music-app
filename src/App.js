@@ -1,4 +1,4 @@
-import {SideBar} from './components/SideBar'
+import {SideBar} from './components/SideBarNav'
 import {MusicBoard} from './components/MusicDetails/MusicBoard'
 import {TopSongs} from './components/TopSongs'
 import {Footer} from './components/Footer/Footer'

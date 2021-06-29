@@ -58,8 +58,16 @@ a:hover {
       font-size: 50%; }
     .container {
       grid-template-columns: repeat(2, 1fr);
+
+      grid-template-areas: 
+      "sidebar sidebar"
+      "nav nav"
+      "main main"
+      "main main"
+      "footer footer";
     }
   }
 
+  
 
  

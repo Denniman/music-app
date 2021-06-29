@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const CategoriesNav = styled.nav`
     grid-area: nav;
     padding: var(--padding);
+
+    @media only screen and (max-width: 1338px) {
+        margin-left: 6.5rem;
+  }
 `
 
 export const Title = styled.h1`

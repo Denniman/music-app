@@ -4,7 +4,6 @@ export const Board = styled.div`
     background-color: #fff;
     color: #252525;
     padding: var(--padding);
-    /* margin-left: 35rem; */
     grid-area: main;
 
     display: grid;
@@ -12,9 +11,17 @@ export const Board = styled.div`
     grid-template-rows: 1fr auto;
     grid-gap: 2rem;
 
+    @media only screen and (max-width: 1338px) {
+        grid-template-columns: repeat(2, .5fr);
+        margin-left: 6.5rem;
+  }
+
     @media only screen and (max-width: 550px) {
         grid-template-columns: repeat(2, 1fr);
+        margin-left: 0;
     }
+
+
 `
 
 export const Title = styled.h2`
