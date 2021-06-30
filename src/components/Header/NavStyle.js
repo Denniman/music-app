@@ -11,6 +11,10 @@ export const CategoriesNav = styled.nav`
 
 export const Title = styled.h1`
     font-size: 2.8rem;
+
+    @media only screen and (max-width: 550px) {
+        font-size: 1.7rem;
+    }
 `
 export const LinkContainer = styled.div`
     padding: .7rem 1.4rem;

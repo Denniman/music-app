@@ -41,8 +41,9 @@ export const LinkContainer = styled.div`
     align-items: flex-start;
 
     @media only screen and (max-width: 550px) {
+        margin-top: 2rem;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 `
 export const LinksNavBtn = styled.button`
@@ -57,5 +58,10 @@ export const LinksNavBtn = styled.button`
 
     &:hover {
         background-color: #fb233b;
+    }
+
+    @media only screen and (max-width: 550px) {
+        margin-top: -7rem;
+        padding: 1rem 1.7rem;
     }
 `
