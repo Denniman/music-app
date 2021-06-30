@@ -32,18 +32,6 @@ export const SideBar = () => {
             <LinksBtn title='Playlist'/>
         </Link>
         </LinkContainer>
-{/* 
-        <LinkContainer>
-        <Link to={'top-songs'} style={{ textDecoration: 'none' }}>
-            <LinksBtn title='Top Songs'/>
-        </Link>
-        </LinkContainer>
-
-        <LinkContainer>
-        <Link to={''} style={{ textDecoration: 'none' }}>
-            <LinksBtn title='Playlist'/>
-        </Link>
-        </LinkContainer> */}
             
         </SideContainer>
     )

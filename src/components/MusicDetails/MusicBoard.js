@@ -4,9 +4,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import {Card} from '../Card'
 import {CategoryTitle} from '../Header/Nav'
 import {Board} from './MusicBoardStyle'
+import ReactLoading from 'react-loading';
 
 export const MusicBoard = () => {
-    const {data:albums, filter} = useSelector((state) => state.getSongsReducer)
+    const {data:albums, filter, isLoading} = useSelector((state) => state.getSongsReducer)
     const dispatch = useDispatch()
 
 
@@ -23,9 +24,8 @@ export const MusicBoard = () => {
         for (let i = 0; i < albums.length; i++) {
             const song = albums[i];
             const matched = song?.title?.label?.toLowerCase().includes(filter.toLowerCase())
-            if(matched) {
-                result.push(song)
-            }
+            if(matched) result.push(song)
+            
         }
 
         return result
@@ -37,8 +37,9 @@ export const MusicBoard = () => {
     return (
         <>
         <CategoryTitle title="Top Albums"/>
+        
         <Board>
-         {filteredValue.map((album) => {
+        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={667} width={375} display={'block'} />) : (filteredValue.map((album) => {
              const {label:albumTitle} = album.title 
 
              const img = album["im:image"][2].label
@@ -46,7 +47,8 @@ export const MusicBoard = () => {
              const attribute = album.rights.label
 
              return (<Card title={albumTitle} attribute={attribute} image={img} key={id}/>)
-         })}
+        }))}
+
         </Board>
         </>
     )
