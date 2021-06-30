@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {CardContainer, Title, Attribution, ArtistName, CardBody} from './style'
+import {CardContainer, Title, ArtistName, CardBody} from './style'
 
 export const Card = ({id, image, title, artist}) => {
     return (

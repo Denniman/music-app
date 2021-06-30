@@ -41,15 +41,15 @@ export const TopSongs = () => {
         <>
         <CategoryTitle title="Top Songs"/>
         <Board>
-        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={667} width={375} />) : 
+        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={'50vh'} width={'50vw'} />) : 
         (filteredSong.map((song) => {
-            const {label:songTitle} = song.title 
 
-             const img = song["im:image"][2].label
-             const id = song.id.attributes["im:id"]
-             const attribute = song.rights.label
+            const {label} = song['im:name']
+            const {label:img} = song["im:image"][2]
+            const id = song.id.attributes["im:id"]
+            const {label:artistName} = song['im:artist']
 
-             return (<Card title={songTitle} attribute={attribute} image={img} key={id}/>)
+             return (<Card title={label} artist={artistName} image={img} key={id}/>)
         }))}
      
         </Board>
