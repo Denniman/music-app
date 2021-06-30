@@ -1,7 +1,6 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom'
-import {getAlbumsAsync} from '../../actions/getSongsAction'
-import { useDispatch, useSelector } from 'react-redux'
+
 import {SearchInput} from '../SearchBar/SearchInput'
 
 
@@ -11,27 +10,13 @@ import {SideContainer, Title, LinkContainer, BrowseTitle} from './SidebarStyle'
 
 export const SideBar = () => {
 
-    const {data:albums} = useSelector((state) => state.getSongsReducer)
-    const dispatch = useDispatch()
-
-    useEffect(() => {
-        dispatch(getAlbumsAsync())
-    }, [])
-
-    const [searchTerm, setSearchTerm] = useState('')
-
-    const inputEl = useRef('')
-
-  const handleChange = (e) => {
-    console.log('value is---', inputEl.current.value.toLowerCase());
-  }
-
+  
 
 
     return(
         <SideContainer>
         <Title>Stutern Music App</Title>
-        <SearchInput  change={handleChange} refVal={inputEl}/>
+        <SearchInput />
 
         <BrowseTitle>Browse Categories</BrowseTitle>
         

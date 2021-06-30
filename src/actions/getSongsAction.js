@@ -11,6 +11,13 @@ const getSongs = (data) => ({
     payload: data
 })
 
+export const filteredSongs = (data) => ({
+    type: types.FILTER_SONGS,
+    payload: data
+})
+
+
+
 
 export const getAlbumsAsync = () => async dispatch => {
     try {

@@ -2,6 +2,7 @@ import {types} from '../type'
 
 const initialState = {
     data: [],
+    filter: '',
     isLoading: true
 }
 
@@ -11,6 +12,8 @@ export const getSongsReducer = (state = initialState, action) => {
             return {...state, data: action.payload,  isLoading: true}
         case types.GET_TOP_SONGS:
             return {...state, data: action.payload, isLoading: true}
+        case types.FILTER_SONGS:
+            return {...state, filter: action.payload}
         default:
             return state
     }
