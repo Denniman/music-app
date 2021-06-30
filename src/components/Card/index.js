@@ -1,8 +1,8 @@
 import React from 'react'
 
-import {CardContainer, Title, Attribution, CardBody} from './style'
+import {CardContainer, Title, Attribution, ArtistName, CardBody} from './style'
 
-export const Card = ({id, image, title, attribute}) => {
+export const Card = ({id, image, title, artist}) => {
     return (
         <ul>
         <li key={id}>
@@ -12,7 +12,9 @@ export const Card = ({id, image, title, attribute}) => {
             <CardBody>
 
                 <Title>{title}</Title>
-                <Attribution>{attribute}</Attribution>
+
+                <ArtistName>{artist}</ArtistName>
+
             </CardBody>
 
         </CardContainer>

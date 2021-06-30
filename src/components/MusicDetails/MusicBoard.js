@@ -39,14 +39,14 @@ export const MusicBoard = () => {
         <CategoryTitle title="Top Albums"/>
         
         <Board>
-        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={667} width={375} display={'block'} />) : (filteredValue.map((album) => {
-             const {label:albumTitle} = album.title 
+        
+        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={'50vh'} width={'50vw'} />) : (filteredValue.map((album) => {
+            const {label} = album['im:name']
+            const {label:img} = album["im:image"][2]
+            const id = album.id.attributes["im:id"]
+            const {label:artistName} = album['im:artist']
 
-             const img = album["im:image"][2].label
-             const id = album.id.attributes["im:id"]
-             const attribute = album.rights.label
-
-             return (<Card title={albumTitle} attribute={attribute} image={img} key={id}/>)
+            return (<Card title={label} artist={artistName} image={img} key={id}/>)
         }))}
 
         </Board>

@@ -41,7 +41,7 @@ export const TopSongs = () => {
         <>
         <CategoryTitle title="Top Songs"/>
         <Board>
-        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={667} width={375} display={'block'} />) : 
+        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={667} width={375} />) : 
         (filteredSong.map((song) => {
             const {label:songTitle} = song.title 
 
