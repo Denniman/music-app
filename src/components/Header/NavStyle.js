@@ -7,6 +7,10 @@ export const CategoriesNav = styled.nav`
     @media only screen and (max-width: 1338px) {
         margin-left: 6.5rem;
   }
+
+  @media only screen and (max-width: 550px) {
+    margin-left: .5rem;
+  }
 `
 
 export const Title = styled.h1`
