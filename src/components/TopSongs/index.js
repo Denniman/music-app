@@ -16,7 +16,7 @@ export const TopSongs = () => {
 
     useEffect(() => {
         dispatch(getSongsAsync())
-    }, [songs])
+    }, [])
 
 
     const filteredSearch = () => {
