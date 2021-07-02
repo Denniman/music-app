@@ -16,6 +16,7 @@ export const TopSongs = () => {
 
     useEffect(() => {
         dispatch(getSongsAsync())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

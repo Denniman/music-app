@@ -3,16 +3,17 @@ import {getAlbumsAsync} from '../../actions/getSongsAction'
 import { useDispatch, useSelector } from 'react-redux'
 import {Card} from '../Card'
 import {CategoryTitle} from '../Header/Nav'
-import {Board} from './MusicBoardStyle'
+import {Board} from './style'
 import ReactLoading from 'react-loading';
 
-export const MusicBoard = () => {
+export const TopAlbums = () => {
     const {data:albums, filter, isLoading} = useSelector((state) => state.getSongsReducer)
     const dispatch = useDispatch()
 
 
     useEffect(() => {
         dispatch(getAlbumsAsync())
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
   

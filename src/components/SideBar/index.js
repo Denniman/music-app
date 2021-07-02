@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-import {SearchInput} from '../SearchBar/SearchInput'
+import {SearchInput} from '../SearchField'
 
 
 import {LinksBtn} from './LinksBtn'

@@ -1,5 +1,5 @@
-import {SideBar} from './components/SideBarNav'
-import {MusicBoard} from './components/MusicDetails/MusicBoard'
+import {SideBar} from './components/SideBar'
+import {TopAlbums} from './components/TopAlbums'
 import {TopSongs} from './components/TopSongs'
 import {Footer} from './components/Footer/Footer'
 import {
@@ -15,7 +15,7 @@ function App() {
         <main className="container">
         <SideBar />
         <Switch>
-          <Route path="/" component={MusicBoard} exact={true}/>
+          <Route path="/" component={TopAlbums} exact={true}/>
           <Route path="/top-songs" component={TopSongs}/>
         </Switch>
         <Footer/>
