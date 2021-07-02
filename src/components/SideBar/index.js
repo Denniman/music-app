@@ -28,7 +28,7 @@ export const SideBar = () => {
         <Link to={'top-songs'} style={{ textDecoration: 'none', marginBottom: '2rem' }}>
             <LinksBtn title='Top Songs'/>
         </Link>
-        <Link to={'https://music.apple.com/us/genre/music-pop/id14?uo=2'} style={{ textDecoration: 'none', marginBottom: '2rem'}}>
+        <Link to={'https://music.apple.com/us/genre/music-pop/id14?uo=2'} target="_blank" style={{ textDecoration: 'none', marginBottom: '2rem'}}>
             <LinksBtn title='iTunes Playlist'/>
         </Link>
         </LinkContainer>
