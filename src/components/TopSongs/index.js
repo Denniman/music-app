@@ -2,8 +2,7 @@ import React, {useEffect} from 'react'
 import {getSongsAsync} from '../../actions/getSongsAction'
 import { useDispatch, useSelector } from 'react-redux'
 import ReactLoading from 'react-loading';
-
-import {Card} from '../Card'
+import {SongsList} from './SongsList'
 import {CategoryTitle} from '../Header/Nav'
 
 
@@ -42,16 +41,8 @@ export const TopSongs = () => {
         <>
         <CategoryTitle title="Top Songs"/>
         <Board>
-        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={'50vh'} width={'50vw'} />) : 
-        (filteredSong.map((song) => {
-
-            const {label} = song['im:name']
-            const {label:img} = song["im:image"][2]
-            const id = song.id.attributes["im:id"]
-            const {label:artistName} = song['im:artist']
-
-             return (<Card title={label} artist={artistName} image={img} key={id}/>)
-        }))}
+        {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={'auto'} width={'30vw'} />) : 
+        (<SongsList songs={filteredSong}/>)}
      
         </Board>
         

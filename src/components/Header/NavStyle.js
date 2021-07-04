@@ -10,6 +10,7 @@ export const CategoriesNav = styled.nav`
 
   @media only screen and (max-width: 550px) {
     margin-left: .5rem;
+    margin-top: .5rem;
   }
 `
 

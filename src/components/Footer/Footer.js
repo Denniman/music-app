@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <FooterContainer>
             <p>
-                Made with &hearts; by <Link target="_blank" to="https://github.com/denniman">Dennis Terna</Link>
+                Made with &hearts; by <Link target="_blank">Dennis Terna</Link>
             </p>
             
         </FooterContainer>
