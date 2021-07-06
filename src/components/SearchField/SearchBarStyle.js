@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { Button} from 'antd';
+import { Button, } from 'antd';
+
 
 export const SearchBarContainer = styled.div`
     background-color: var(--theme-color);
@@ -31,8 +32,16 @@ export const CustomButton = styled(Button)`
     font-size: 1.5rem;
     border: none;
     border-radius: .5rem;
-    color: #fff;
-    background-color: #252525;
+    color: #495057;
+    background-color: transparent;
     cursor: pointer;
 `
-
+export const CustomClose = styled(Button)`
+    padding: .9rem 2.5rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: .5rem;
+    color: #495057;
+    background-color: transparent;
+    cursor: pointer;
+`

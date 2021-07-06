@@ -19,8 +19,9 @@ export const SongsList = ({songs}) => {
              const {label:img} = song["im:image"][2]
              const id = song.id.attributes["im:id"]
              const {label:artistName} = song['im:artist']
+             const href = song["im:collection"]?.link?.attributes
 
-            return (<Card title={label} artist={artistName} image={img} key={id}/>)
+            return (<Card title={label} artist={artistName} image={img} key={id} link={href}/>)
         })}
 
         </>

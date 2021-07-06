@@ -13,7 +13,6 @@ export const ArtistName = styled.h3`
     color: #7d7d7d;
 `
 export const CardBody = styled.div`
-    /* text-align: center; */
     padding: 1.7rem .7rem;
 `
 
