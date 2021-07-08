@@ -7,8 +7,8 @@ export const Card = ({id, image, title, artist, link}) => {
         <ul>
         <li key={id}>
         <CardContainer>
-            <a href={link}>
-            <Image src={image} alt={title} />
+            <a href={link} target="_blank" rel="noopener noreferrer">
+            <Image src={image} alt={title} loading="lazy"/>
             </a>
            
 
