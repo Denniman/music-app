@@ -16,6 +16,9 @@ export const filteredSongs = (data) => ({
     payload: data
 })
 
+export const clearFilter = () => ({
+    type: types.CLEAR_FILTER
+})
 
 
 

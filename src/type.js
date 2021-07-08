@@ -2,5 +2,6 @@ export const types = {
     GET_TOP_ALBUMS: 'GET_TOP_ALBUMS',
     GET_TOP_SONGS: 'GET_TOP_SONGS',
     FILTER_SONGS: 'FILTER_SONGS',
+    CLEAR_FILTER: 'CLEAR_FILTER'
 }
 

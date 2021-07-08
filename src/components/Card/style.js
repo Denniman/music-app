@@ -20,3 +20,13 @@ export const Attribution = styled.p`
     font-size: 1rem;
     color: tomato;
 `
+
+export const Image = styled.img`
+    width: 100%;
+    transition: all .3s;
+
+    &:hover {
+        opacity: 0.6;
+        background-color: black;
+    }
+`

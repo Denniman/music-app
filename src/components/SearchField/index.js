@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useDispatch} from 'react-redux'
+import {clearFilter} from '../../actions/getSongsAction'
 import { SearchOutlined, CloseOutlined } from '@ant-design/icons';
 
 
@@ -22,6 +23,7 @@ export const SearchInput = () => {
 
     const clearInput = () => {
         setWordEntered('')
+        dispatch(clearFilter())
     }
 
   
