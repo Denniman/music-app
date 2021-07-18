@@ -41,7 +41,8 @@ export const TopSongs = () => {
         <>
         <CategoryTitle title="Top Songs"/>
         <Board>
-            {isLoading ? (<ReactLoading type={'spin'} color={'red'} height={'auto'} width={'30vw'} />) : 
+            {isLoading ? 
+            (<ReactLoading type={'spin'} color={'red'} height={'auto'} width={'30vw'} />) : 
             (<SongsList songs={filteredSong}/>)}
         </Board>
         

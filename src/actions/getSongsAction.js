@@ -23,6 +23,9 @@ export const clearFilter = () => ({
 
 
 export const getAlbumsAsync = () => async dispatch => {
+    dispatch({
+        type: types.TOP_SONGS_REQUEST
+    })
     try {
         const res = await fetch('https://itunes.apple.com/us/rss/topalbums/limit=100/json')
         const data = await res.json()
@@ -34,6 +37,9 @@ export const getAlbumsAsync = () => async dispatch => {
 
 
 export const getSongsAsync = () => async dispatch => {
+    dispatch({
+        type: types.TOP_SONGS_REQUEST
+    })
     try {
         const res = await fetch('https://itunes.apple.com/us/rss/topsongs/limit=100/json')
         const data = await res.json()
